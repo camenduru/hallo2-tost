@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json-schema.org/draft-04/hyper-schema#",
+  "type": "object",
+  "properties": {
+    "readme": {
+      "type": "string",
+      "title": "Hallo2: Long-Duration and High-Resolution Audio-Driven Portrait Image Animation",
+      "author": "Jiahao Cui, Hui Li, Yao Yao, Hao Zhu, Hanlin Shang, Kaihui Cheng, Hang Zhou, Siyu Zhu, Jingdong Wang",
+      "code": "https://github.com/fudan-generative-vision/hallo2",
+      "api": "https://github.com/camenduru/tost-api-examples/blob/main/v1/hallo2.ipynb",
+      "tags": [
+        "Image to Talking Video"
+      ],
+      "widget": "readme"
+    },
+    "upload1": {
+      "type": "string",
+      "widget": "upload",
+      "upload_url": "https://litterbox.catbox.moe/resources/internals/api.php",
+      "property": "input_image"
+    },
+    "input_image": {
+      "type": "string",
+      "description": "Input Image URL",
+      "widget": "textarea"
+    },
+    "upload2": {
+      "type": "string",
+      "widget": "upload",
+      "upload_url": "https://litterbox.catbox.moe/resources/internals/api.php",
+      "property": "input_audio"
+    },
+    "input_audio": {
+      "type": "string",
+      "description": "Input Audio URL",
+      "widget": "textarea"
+    },
+    "example": {
+      "type": "string",
+      "image1": "https://fakeimg.pl/512x512/282828/eae0d0/?text=#input.png",
+      "image2": "https://fakeimg.pl/512x512/282828/eae0d0/?text=#.png",
+      "image3": "https://fakeimg.pl/512x512/282828/eae0d0/?text=#output.png",
+      "image4": "https://fakeimg.pl/512x512/282828/eae0d0/?text=#.png",
+      "widget": "example"
+    }
+  },
+  "buttons": [
+    {
+      "id": "enter",
+      "label": "🥪 Enter"
+    }
+  ]
+}
