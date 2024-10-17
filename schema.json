@@ -7,6 +7,8 @@
       "title": "Hallo2: Long-Duration and High-Resolution Audio-Driven Portrait Image Animation",
       "author": "Jiahao Cui, Hui Li, Yao Yao, Hao Zhu, Hanlin Shang, Kaihui Cheng, Hang Zhou, Siyu Zhu, Jingdong Wang",
       "code": "https://github.com/fudan-generative-vision/hallo2",
+      "paper": "https://arxiv.org/abs/2410.07718",
+      "page": "https://fudan-generative-vision.github.io/hallo2/#/",
       "api": "https://github.com/camenduru/tost-api-examples/blob/main/v1/hallo2.ipynb",
       "tags": [
         "Image to Talking Video"
@@ -37,10 +39,11 @@
     },
     "example": {
       "type": "string",
-      "image1": "https://fakeimg.pl/512x512/282828/eae0d0/?text=#input.png",
-      "image2": "https://fakeimg.pl/512x512/282828/eae0d0/?text=#.png",
-      "image3": "https://fakeimg.pl/512x512/282828/eae0d0/?text=#output.png",
-      "image4": "https://fakeimg.pl/512x512/282828/eae0d0/?text=#.png",
+      "image1": "https://fakeimg.pl/512x512/282828/eae0d0/?text=input#.png",
+      "image2": "https://files.catbox.moe/f691if.jpg",
+      "image3": "https://fakeimg.pl/512x512/282828/eae0d0/?text=output#.png",
+      "image4": "https://files.catbox.moe/8ilths.mp4",
+      "video_aspect_ratio": "100%",
       "widget": "example"
     }
   },
