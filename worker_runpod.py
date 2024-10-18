@@ -1,7 +1,4 @@
-# pylint: disable=E1101
-# worker_runpod.py
-
-import os, sys, shutil, json, requests, random, time, runpod
+import os, sys, json, requests, random, time, runpod
 
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
@@ -492,9 +489,7 @@ def generate(input):
         input_audio=download_file(url=input_audio, save_dir='/content', file_name='input_audio')
 
         save_path = inference_process(config_path="/content/hallo2/configs/inference/long.yaml", source_image=input_image, driving_audio=input_audio)
-        merge_videos(save_path, os.path.join(Path(save_path).parent, "merge_video.mp4"))
-        shutil.move("/content/hallo2/output_long/debug/input_image/merge_video.mp4", "/content/hallo2/output_long/debug/input_image/hallo2-tost.mp4")
-
+        merge_videos(save_path, os.path.join(Path(save_path).parent, "hallo2-tost.mp4"))
         result = "/content/hallo2/output_long/debug/input_image/hallo2-tost.mp4"
 
         notify_uri = values['notify_uri']
