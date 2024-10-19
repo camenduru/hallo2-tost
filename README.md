@@ -21,4 +21,4 @@ https://fudan-generative-vision.github.io/hallo2/#/ <br />
 https://github.com/user-attachments/assets/1a7a36f2-17fb-4df0-8e67-af3262646649
 
 ### 🏢 Sponsor
-https://runpod.io
+[https://runpod.io](https://runpod.io?ref=iqi9iy8y)
