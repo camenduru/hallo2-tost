@@ -1,29 +1,5 @@
-import os, sys, json, requests, random, time, runpod
-
-sys.path.append(os.path.dirname(os.path.abspath(__file__)))
-
-"""
-This script contains the main inference pipeline for processing audio and image inputs to generate a video output.
-The script imports necessary packages and classes, defines a neural network model, 
-and contains functions for processing audio embeddings and performing inference.
-The main inference process is outlined in the following steps:
-1. Initialize the configuration.
-2. Set up runtime variables.
-3. Prepare the input data for inference (source image, face mask, and face embeddings).
-4. Process the audio embeddings.
-5. Build and freeze the model and scheduler.
-6. Run the inference loop and save the result.
-Usage:
-This script can be run from the command line with the following arguments:
-- audio_path: Path to the audio file.
-- image_path: Path to the source image.
-- face_mask_path: Path to the face mask image.
-- face_emb_path: Path to the face embeddings file.
-- output_path: Path to save the output video.
-Example:
-python scripts/inference.py --audio_path audio.wav --image_path image.jpg 
-    --face_mask_path face_mask.png --face_emb_path face_emb.pt --output_path output.mp4
-"""
+import os, json, requests, random, time, runpod
+from urllib.parse import urlsplit
 
 import torch
 from diffusers import AutoencoderKL, DDIMScheduler
@@ -471,7 +447,9 @@ def inference_process(config_path, source_image=None, driving_audio=None, pose_w
 
 def download_file(url, save_dir, file_name):
     os.makedirs(save_dir, exist_ok=True)
-    file_path = os.path.join(save_dir, file_name)
+    file_suffix = os.path.splitext(urlsplit(url).path)[1]
+    file_name_with_suffix = file_name + file_suffix
+    file_path = os.path.join(save_dir, file_name_with_suffix)
     response = requests.get(url)
     response.raise_for_status()
     with open(file_path, 'wb') as file:
